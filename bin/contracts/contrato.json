@@ -1,0 +1,104 @@
+{
+    "contractName": "contrato",
+    "abi": [
+        {
+            "inputs": [],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"c:/Users/Asus/Desktop/incluit/contracts/contrato.sol\":\"contrato\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/Asus/Desktop/incluit/contracts/contrato.sol\":{\"keccak256\":\"0x12573ec7368d89f48ebc4070d52865c0232547b83a61b436add259ee6773d42d\",\"urls\":[\"bzz-raw://921171aa1c3bc9775d12635859a5e54090e3223acabfbce8eab21a4eb8081c56\",\"dweb:/ipfs/QmcP8PK5cBim11UHhdFSSycWGL2Rkx7J6ogWHwi4DLkjoE\"]}},\"version\":1}",
+    "bytecode": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220625ff8c0a9f07dc0bad033a53c74336ef0db4aa3d00f93ce0c7bcbffc44ab96864736f6c63430008110033",
+    "deployedBytecode": "6080604052600080fdfea2646970667358221220625ff8c0a9f07dc0bad033a53c74336ef0db4aa3d00f93ce0c7bcbffc44ab96864736f6c63430008110033",
+    "sourceMap": "27:55:3:-:0;;;50:29;;;;;;;;;;27:55;;;;;;",
+    "deployedSourceMap": "27:55:3:-:0;;;;;",
+    "sourcePath": "c:/Users/Asus/Desktop/incluit/contracts/contrato.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.8.17+commit.8df45f5f"
+    },
+    "ast": {
+        "absolutePath": "c:/Users/Asus/Desktop/incluit/contracts/contrato.sol",
+        "exportedSymbols": {
+            "contrato": [
+                53
+            ]
+        },
+        "id": 54,
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 48,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.8",
+                    ".17"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "0:25:3"
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "canonicalName": "contrato",
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "fullyImplemented": true,
+                "id": 53,
+                "linearizedBaseContracts": [
+                    53
+                ],
+                "name": "contrato",
+                "nameLocation": "36:8:3",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "body": {
+                            "id": 51,
+                            "nodeType": "Block",
+                            "src": "63:16:3",
+                            "statements": []
+                        },
+                        "id": 52,
+                        "implemented": true,
+                        "kind": "constructor",
+                        "modifiers": [],
+                        "name": "",
+                        "nameLocation": "-1:-1:-1",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 49,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "61:2:3"
+                        },
+                        "returnParameters": {
+                            "id": 50,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "63:0:3"
+                        },
+                        "scope": 53,
+                        "src": "50:29:3",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    }
+                ],
+                "scope": 54,
+                "src": "27:55:3",
+                "usedErrors": []
+            }
+        ],
+        "src": "0:83:3"
+    },
+    "functionHashes": {},
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "12600",
+            "executionCost": "66",
+            "totalCost": "12666"
+        }
+    }
+}

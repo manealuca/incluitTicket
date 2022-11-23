@@ -1,0 +1,104 @@
+{
+    "contractName": "Manager",
+    "abi": [
+        {
+            "inputs": [],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"c:/Users/Asus/Desktop/incluit/contracts/Manager.sol\":\"Manager\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/Asus/Desktop/incluit/contracts/Manager.sol\":{\"keccak256\":\"0xbe2e971409ae516c1d75f4c10ca0bf2098d979c2b2f278963e70d6a3bc54d4fd\",\"urls\":[\"bzz-raw://2fcb1fdd97f5c6c351ea17ba384e12e2246f81a6152f4faa038a552d7931a9ec\",\"dweb:/ipfs/QmckQMwXRouj1gas3oP2VT2fVyiU2ZWyUWgrN8Por1QkEJ\"]}},\"version\":1}",
+    "bytecode": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220ff80a0c77e500f7df75ded0fe73e0956f1a9f19ae205df47bc7842b118fb0bf964736f6c63430008110033",
+    "deployedBytecode": "6080604052600080fdfea2646970667358221220ff80a0c77e500f7df75ded0fe73e0956f1a9f19ae205df47bc7842b118fb0bf964736f6c63430008110033",
+    "sourceMap": "28:57:0:-:0;;;51:31;;;;;;;;;;28:57;;;;;;",
+    "deployedSourceMap": "28:57:0:-:0;;;;;",
+    "sourcePath": "c:/Users/Asus/Desktop/incluit/contracts/Manager.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.8.17+commit.8df45f5f"
+    },
+    "ast": {
+        "absolutePath": "c:/Users/Asus/Desktop/incluit/contracts/Manager.sol",
+        "exportedSymbols": {
+            "Manager": [
+                6
+            ]
+        },
+        "id": 7,
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 1,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.8",
+                    ".17"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "0:24:0"
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "canonicalName": "Manager",
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "fullyImplemented": true,
+                "id": 6,
+                "linearizedBaseContracts": [
+                    6
+                ],
+                "name": "Manager",
+                "nameLocation": "37:7:0",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "body": {
+                            "id": 4,
+                            "nodeType": "Block",
+                            "src": "64:18:0",
+                            "statements": []
+                        },
+                        "id": 5,
+                        "implemented": true,
+                        "kind": "constructor",
+                        "modifiers": [],
+                        "name": "",
+                        "nameLocation": "-1:-1:-1",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 2,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "62:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 3,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "64:0:0"
+                        },
+                        "scope": 6,
+                        "src": "51:31:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    }
+                ],
+                "scope": 7,
+                "src": "28:57:0",
+                "usedErrors": []
+            }
+        ],
+        "src": "0:85:0"
+    },
+    "functionHashes": {},
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "12600",
+            "executionCost": "66",
+            "totalCost": "12666"
+        }
+    }
+}
