@@ -3,17 +3,17 @@ pragma solidity ^0.8.17;
 import "./States.sol";
 
 contract Ticket{
-    uint _ticketId;
+    uint public _ticketId;
     string  _eventName;
     string _eventDescription;
-    EvenType _eventType;
-    uint256  _price;
+    EventType public _eventType;
+    uint256  public _price;
     TicketStatus _ticketStatus;
-    TransferStatus _transferStatus;
-    address _owner;
-    bool Created;
+    TransferStatus public _transferStatus;
+    address public _owner;
+    bool public Created;
     
-    constructor(string  memory name, string memory eventDescription, EvenType eventType, uint256 price, TransferStatus transferStatus,address owner,uint256 id){
+    constructor(string  memory name, string memory eventDescription, EventType eventType, uint256 price, TransferStatus transferStatus,address owner,uint256 id){
         _owner = owner;
         _eventName = name;
         _eventDescription = eventDescription;
@@ -45,6 +45,10 @@ contract Ticket{
     function changeOwner(address newOwner) public isOwner{
         _owner = newOwner;
     }
+
+    function getTransferStatus() public returns(TransferStatus){
+       return _transferStatus;
+    } 
 
     //https://github.com/CryptozombiesHQ/cryptozombies-lesson-code
 
