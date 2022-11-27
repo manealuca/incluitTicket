@@ -1,6 +1,6 @@
 pragma solidity ^0.8.17;
 
-enum TransferStatus{
+enum  TransferStatus{
    Transferible,
    NoTransferible
 }
@@ -10,7 +10,7 @@ enum TicketStatus {
     Expired
 }
 
-enum EvenType{
+enum EventType{
     Sports,
     Music,
     Cinema
