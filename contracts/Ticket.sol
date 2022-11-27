@@ -24,12 +24,12 @@ contract Ticket{
         Created = true;        
     }
 
-    
-
     modifier isOwner{
         require(msg.sender == _owner,"");
         _;
     }
+
+    event ShowTicketStatus(Ticket ticket);
 
     function ChangePrice(uint newPrice)public  isOwner{
         _price = newPrice;
@@ -46,12 +46,8 @@ contract Ticket{
         _owner = newOwner;
     }
 
-    function getTransferStatus() public returns(TransferStatus){
-       return _transferStatus;
-    } 
-
+    function viewStatus(Ticket ticket)public {
+        emit ShowTicketStatus(ticket);
+    }
     //https://github.com/CryptozombiesHQ/cryptozombies-lesson-code
-
-    //https://github.com/MauroPerna/sc-ticketapp
-
 }
