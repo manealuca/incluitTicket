@@ -33,19 +33,30 @@ contract Manager{
         require(msg.value >= initialTicketValue,"You don have enought balance to mint this ticket");
         _;
     }
+
+    modifier EnoughtBalanceToTransfer(uint256 id){
+        require(msg.value >=tickets[id]._price(),"You Dont have enought balance");
+        _;
+    }
+
     modifier onlyOwner(uint256 id){
         require(msg.sender == tickets[id]._owner(),"Only the owner can delete a ticket");
         _;
     }
     modifier IsTransferible(uint256 id){
-        require(tickets[id].getTransferStatus() == TransferStatus.Transferible,"The Ticket  must be Transferible");
+        require(tickets[id]._transferStatus() == TransferStatus.Transferible,"The Ticket  must be Transferible");
         _;
     }
+    event FundsReceived(uint256 amount);
     event Statistcs(TicketStatistcs stats );
 //    event ShowTicket(Ticket ticket);
     event ShowCommision(uint256 fee);
-    receive() external payable{}
-    fallback() external payable {}
+    receive() external payable{
+         emit FundsReceived(msg.value);
+    }
+    fallback() external payable {
+        emit FundsReceived(msg.value);
+    }
     
     function CreateTicket(string memory name, string memory description, EventType eventType) public payable  EnoughtBalance{
         Counter+=1;
@@ -113,10 +124,7 @@ contract Manager{
         userTickets[msg.sender].pop();
     }
 
-    function TransferTicket(uint256 id,address newOwner) public payable IsTransferible(id) {
-        //TODO logica de transferencia
-        //ValidarBalance;
-        //verificarOwner;
+    function TransferTicket(uint256 id,address newOwner) public payable IsTransferible(id)  EnoughtBalanceToTransfer(id) onlyOwner(id){
         address oldOwner = tickets[id]._owner();
         (bool success, ) = oldOwner.call{value: msg.value-ManageFee(id, oldOwner)}("");
         require(success == true, "Transaction failed!");
@@ -128,13 +136,14 @@ contract Manager{
         return ((tickets[id]._price() * fee)/100);
     }
 
-    function ManageFee(uint256 id, address ticketOwner)public payable returns(uint256){
+    function ManageFee(uint256 id, address ticketOwner)public payable onlyOwner(id) returns(uint256){
         uint256 ticketFee =calculateFee(id);
         (bool success, ) = ticketOwner.call{value:ticketFee}("");
         require(success == true, "Transaction failed!");
         return ticketFee;
     }
     function ChangeTicketPrice(uint256 ticketId,uint256 newPrice) public {
+        ManageFee(ticketId,msg.sender );
         tickets[ticketId].ChangePrice(newPrice);
     }
     function showTicket(uint256 index)public view returns(Ticket){
